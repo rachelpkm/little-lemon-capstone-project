@@ -1,10 +1,18 @@
 import companyLogo from './images/logo.svg';
+import hamburgerMenu from './images/icon _hamburgermenu_.svg'
 
 function Nav() {
     return(
         <nav>
-            <ul>
-                <img className='logo' src={companyLogo} alt="logo" />
+            <a href='/'>
+                <img className='hamburger-menu' src={hamburgerMenu} alt="logo" />
+            </a>
+            <ul className='nav-links-container'>
+                <li>
+                    <a href='/'>
+                        <img className='logo' src={companyLogo} alt="logo" />
+                    </a>
+                </li>
                 <li>
                     <a href="/">Homepage</a>
                 </li>

@@ -1,7 +1,7 @@
-import danielXavier from './images/pexels-daniel-xavier-1239291.jpg';
-import hannahNelson from './images/pexels-hannah-nelson-1065084.jpg';
-import justinShaifer from './images/pexels-justin-shaifer-1222271.jpg';
-import stefanStefancik from './images/pexels-stefan-stefancik-91227.jpg';
+import danielXavier from './images/daniel-xavier.jpg';
+import hannahNelson from './images/hannah-nelson.jpg';
+import justinShaifer from './images/justin-shaifer.jpg';
+import stefanStefancik from './images/stefan-stefancik.jpg';
 
 function CustomersSays() {
     return(

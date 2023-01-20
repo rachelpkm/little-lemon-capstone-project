@@ -1,5 +1,6 @@
 import companyLogo from './images/logo.svg';
-import hamburgerMenu from './images/icon _hamburgermenu_.svg'
+import hamburgerMenu from './images/icon _hamburgermenu_.svg';
+import { Link } from 'react-router-dom';
 
 function Nav() {
     return(
@@ -9,27 +10,27 @@ function Nav() {
             </a>
             <ul className='nav-links-container'>
                 <li>
-                    <a href='/'>
+                    <Link to='/'>
                         <img className='logo' src={companyLogo} alt="logo" />
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                    <a href="/">Homepage</a>
+                    <Link to="/">Homepage</Link>
                 </li>
                 <li>
-                    <a href="/about-us">About</a>
+                    <Link to="/about-us">About</Link>
                 </li>
                 <li>
-                    <a href="/menu">Menu</a>
+                    <Link to="/menu">Menu</Link>
                 </li>
                 <li>
-                    <a href="/reservations">Reservations</a>
+                    <Link to="/reservations">Reservations</Link>
                 </li>
                 <li>
-                    <a href="/online-order">Online Order</a>
+                    <Link to="/online-order">Online Order</Link>
                 </li>
                 <li>
-                    <a href="/login">Login</a>
+                    <Link to="/login">Login</Link>
                 </li>
             </ul>
         </nav>

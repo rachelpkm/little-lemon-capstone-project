@@ -9,30 +9,30 @@ function CustomersSays() {
             <div className='testimonials'>
                 <h2>Testimonials</h2>
                 <div className='rowTestimonials'>
-                <div className='cardTestimonials'>
-                    <h4>Rating</h4>
-                    <img src={danielXavier} width="100rem" alt="daniel xavier"/>
-                    <h4>Name</h4>
-                    <h5>Review text</h5>
-                </div>
-                <div className='cardTestimonials'>
-                    <h4>Rating</h4>
-                    <img src={stefanStefancik} width="100rem" alt="stefan stefancik"/>
-                    <h4>Name</h4>
-                    <h5>Review text</h5>
-                </div>
-                <div className='cardTestimonials'>
-                    <h4>Rating</h4>
-                    <img src={hannahNelson} width="100rem" alt="hannah nelson"/>
-                    <h4>Name</h4>
-                    <h5>Review text</h5>
-                </div>
-                <div className='cardTestimonials'>
-                    <h4>Rating</h4>
-                    <img src={justinShaifer} width="100rem" alt="justin shaifer"/>
-                    <h4>Name</h4>
-                    <h5>Review text</h5>
-                </div>
+                    <div className='cardTestimonials'>
+                        <h4 className='test-title'>Rating</h4>
+                        <img src={danielXavier} className='test-img' alt="daniel xavier"/>
+                        <h4 className='test-name'>Name</h4>
+                        <h5 className="test-review">Review text</h5>
+                    </div>
+                    <div className='cardTestimonials'>
+                        <h4 className='test-title'>Rating</h4>
+                        <img src={stefanStefancik} className='test-img' alt="stefan stefancik"/>
+                        <h4 className='test-name'>Name</h4>
+                        <h5 className="test-review">Review text</h5>
+                    </div>
+                    <div className='cardTestimonials'>
+                        <h4 className='test-title'>Rating</h4>
+                        <img src={hannahNelson} className='test-img' alt="hannah nelson"/>
+                        <h4 className='test-name'>Name</h4>
+                        <h5 className="test-review">Review text</h5>
+                    </div>
+                    <div className='cardTestimonials'>
+                        <h4 className='test-title'>Rating</h4>
+                        <img src={justinShaifer} className='test-img' alt="justin shaifer"/>
+                        <h4 className='test-name'>Name</h4>
+                        <h5 className="test-review">Review text</h5>
+                    </div>
                 </div>
             </div>
         </>

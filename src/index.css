@@ -61,7 +61,7 @@ a:active {
   font-family:'Karla', sans-serif;
   font-weight: bold;
   padding-left: 16rem;
-  padding-right: 16rem;
+  padding-right: 17rem;
 }
 
 .hamburger-menu {
@@ -139,7 +139,7 @@ header {
 
 /* SPECIALS */
 .specials {
-  padding: 5rem 12rem 3rem 12rem;
+  padding: 5rem 16rem 3rem 16rem;
   display: flex;
   flex-direction: column;
 }
@@ -224,6 +224,70 @@ header {
   font-size: 16px;
 }
 
+/* CUSTOMERSAY */
+.testimonials {
+  background-color: #495E57;
+  text-align: center;
+  padding: 6rem 16rem 3rem 16rem;
+}
+
+.testimonials h2 {
+  color: #F4CE14;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 36px;
+  padding-bottom: 4rem;
+}
+
+.rowTestimonials {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.cardTestimonials {
+  background-color: white;
+  width: 200px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr)
+}
+
+.test-img {
+  grid-column: 1;
+  grid-row: 2;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.test-title {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  padding-bottom: 1rem;
+}
+
+.test-name {
+  grid-column: 2;
+  grid-row: 2;
+  place-self: center;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.test-review {
+  grid-column: 1;
+  grid-row: 3;
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
 
 /* FOOTER */
 footer {

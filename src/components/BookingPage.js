@@ -1,8 +1,11 @@
+import BookingForm from "./BookingForm";
+
 function BookingPage() {
     return (
-      <>
-            <h1>Reserve a table with us</h1>
-    </>
+      <div className="booking-page">
+        <h1>Book now!</h1>
+        <BookingForm />
+    </div>
   );
 };
 

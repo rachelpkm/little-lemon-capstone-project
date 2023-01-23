@@ -381,6 +381,21 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* BOOKING FORM */
+.booking-page {
+  padding: 5rem 16rem 5rem 16rem;
+}
+
+.booking-page h1 {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+form {
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 600px) {
 

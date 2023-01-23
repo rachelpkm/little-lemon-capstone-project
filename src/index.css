@@ -228,7 +228,7 @@ header {
 .testimonials {
   background-color: #495E57;
   text-align: center;
-  padding: 6rem 16rem 3rem 16rem;
+  padding: 6rem 16rem 8rem 16rem;
 }
 
 .testimonials h2 {
@@ -287,6 +287,64 @@ header {
   font-family: 'Karla', sans-serif;
   font-weight: 500;
   font-size: 14px;
+}
+
+/* CHICAGO */
+.chicago {
+  padding: 6rem 16rem 8rem 16rem;
+  color: #495E57;
+  display: flex;
+}
+
+.chicago-column {
+  padding-right: 20rem;
+}
+
+.chicago-column h1 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 64px;
+}
+
+.chicago-column h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.chicago-column p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+.chicago-img {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.img2 {
+  position: absolute;
+  top: 100px;
+  left: -180px;
+}
+
+.img1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.chicago-img img {
+  width: 272px;
+  height: 340px;
+  object-fit: cover;
+  object-position: 90%;
 }
 
 /* FOOTER */

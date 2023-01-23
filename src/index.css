@@ -349,29 +349,36 @@ header {
 
 /* FOOTER */
 footer {
-  width: 100%;
+  background-color: #495E57;
+  padding: 5rem 16rem 5rem 16rem;
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
 }
 
-.footer-img {
-  width: 150px;
-  grid-column: 2 / span 2;
+.footer-container p {
+  color:#F4CE14;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.grid-item-nav {
-  grid-column: 4 / span 2;
+.footer-container address {
+  color: white;
+  font-weight: 500;
 }
 
-.grid-item-contact {
-  grid-column: 6 / span 2;
+.footer-logo {
+  width: 10rem;
+  background-color: white;
+  padding: 1rem;
 }
 
-.grid-item-social {
-  grid-column: 8 / span 2;
+.footer-container li {
+  margin-bottom: 0.5rem;
 }
 
 /* MEDIA QUERIES */

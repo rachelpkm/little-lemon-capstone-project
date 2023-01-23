@@ -2,6 +2,10 @@ import companyLogo from './images/logo.svg';
 import hamburgerMenu from './images/icon _hamburgermenu_.svg';
 import { Link } from 'react-router-dom';
 
+const linkStyle = {
+    color: "black",
+}
+
 function Nav() {
     return(
         <nav>
@@ -15,22 +19,22 @@ function Nav() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/">Homepage</Link>
+                    <Link to="/" style={linkStyle}>Homepage</Link>
                 </li>
                 <li>
-                    <Link to="/about-us">About</Link>
+                    <Link to="/about-us" style={linkStyle}>About</Link>
                 </li>
                 <li>
-                    <Link to="/menu">Menu</Link>
+                    <Link to="/menu" style={linkStyle}>Menu</Link>
                 </li>
                 <li>
-                    <Link to="/reservations">Reservations</Link>
+                    <Link to="/reservations" style={linkStyle}>Reservations</Link>
                 </li>
                 <li>
-                    <Link to="/online-order">Online Order</Link>
+                    <Link to="/online-order" style={linkStyle}>Online Order</Link>
                 </li>
                 <li>
-                    <Link to="/login">Login</Link>
+                    <Link to="/login" style={linkStyle}>Login</Link>
                 </li>
             </ul>
         </nav>

@@ -463,6 +463,10 @@ input, select {
   padding: 0.5rem;
 }
 
+input:focus:invalid, select:focus:invalid {
+  border: 2px solid red;
+}
+
 input:hover, select:hover {
   cursor: pointer;
 }

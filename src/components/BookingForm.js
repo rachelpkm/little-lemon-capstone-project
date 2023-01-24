@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
-function BookingForm() {
-    const [availableDates, setAvailableDates] = useState('');
-    const [availableTimes, setAvailableTimes] = useState('17:00');
+function BookingForm({ availableTimes, setAvailableTimes}) {
     const [guests, setGuests] = useState('');
     const [occasion, setOccasion] = useState('Birthday');
 
@@ -11,15 +9,22 @@ function BookingForm() {
       e.preventDefault();
 
       console.log(`
-      Date: ${availableDates},
-      Time: ${availableTimes},
+      Date: ${availableTimes.date},
+      Time: ${availableTimes.time},
       Number of Guests: ${guests},
       Occasion: ${occasion}`);
 
-      setAvailableDates('');
-      setAvailableTimes('17:00');
+      setAvailableTimes({
+        date: "",
+        time: "17:00"
+      });
       setGuests('');
       setOccasion('Birthday');
+    };
+
+    // ONCHANGE HANDLER FOR DATE AND TIME
+    const handleChange = e => {
+        setAvailableTimes({ ...availableTimes, [e.target.name]: e.target.value });
     };
 
     return(
@@ -28,14 +33,16 @@ function BookingForm() {
             <input
                 type="date"
                 id="res-date"
-                value={availableDates}
-                onChange={e => setAvailableDates(e.target.value)}
+                name="date"
+                value={availableTimes.date}
+                onChange={handleChange}
             />
             <label htmlFor="res-time">Choose time</label>
             <select
                 id="res-time "
-                value={availableTimes}
-                onChange={e => setAvailableTimes(e.target.value)}
+                name='time'
+                value={availableTimes.time}
+                onChange={handleChange}
             >
                 <option>17:00</option>
                 <option>18:00</option>

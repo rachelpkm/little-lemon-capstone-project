@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 function BookingForm({ availableTimes, dispatch }) {
     const { times } = availableTimes;
+    const [date, setDate] = useState('');
     const [bookings, setBookings] = useState({
-        date: '',
         time: '17:00',
         guests: '',
         occasion: 'Birthday'
@@ -14,13 +14,13 @@ function BookingForm({ availableTimes, dispatch }) {
       e.preventDefault();
 
       console.log(`
-      Date: ${bookings.date},
-      Time: ${bookings.time},
-      Number of Guests: ${bookings.guests},
-      Occasion: ${bookings.occasion}`);
+        Date: ${date},
+        Time: ${bookings.time},
+        Number of Guests: ${bookings.guests},
+        Occasion: ${bookings.occasion}`);
 
-      setBookings({
-        date: '',
+        setDate('');
+        setBookings({
         time: '17:00',
         guests: '',
         occasion: 'Birthday',
@@ -40,10 +40,10 @@ function BookingForm({ availableTimes, dispatch }) {
                 type="date"
                 id="res-date"
                 name="date"
-                value={bookings.date}
+                value={date}
                 onChange={e => {
-                    setBookings(prevState => ({ ...prevState, date: e.target.value }));
-                    dispatch({ type: 'UPDATE_TIMES', date: e.target.value });
+                    setDate(e.target.value);
+                    dispatch({ type: 'UPDATE_TIMES', date: new Date(e.target.value) });
                   }}
             />
             <label htmlFor="res-time">Choose time</label>

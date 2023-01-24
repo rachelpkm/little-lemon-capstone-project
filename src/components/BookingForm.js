@@ -1,31 +1,45 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { submitAPI } from '../utils/temp';
 
 function BookingForm({ availableTimes, dispatch }) {
+    const navigate = useNavigate();
     const { times } = availableTimes;
-    const [date, setDate] = useState('');
     const [bookings, setBookings] = useState({
-        time: '17:00',
+        date: '',
+        time: '',
         guests: '',
         occasion: 'Birthday'
     });
+    const [isFormValid, setIsFormValid] = useState(true);
 
     // SUBMIT HANDLER
     const handleSubmit = e => {
       e.preventDefault();
 
+    // SUBMIT LOGIC
+    if ((bookings.date, bookings.time, bookings.guests !== '')) {
+        submitAPI(isFormValid);
+        navigate('/confirmation');
+
       console.log(`
-        Date: ${date},
+        Date: ${bookings.date},
         Time: ${bookings.time},
         Number of Guests: ${bookings.guests},
         Occasion: ${bookings.occasion}`);
 
-        setDate('');
+    // RESET VALUE
         setBookings({
-        time: '17:00',
+        date: '',
+        time: '',
         guests: '',
         occasion: 'Birthday',
       });
-    };
+    } else {
+        setIsFormValid(!isFormValid);
+        console.log("THERE IS AN ERROR");
+        }
+    }
 
     // HANDLING MULTIPLE INPUTS
     const handleChange = e => {
@@ -40,9 +54,9 @@ function BookingForm({ availableTimes, dispatch }) {
                 type="date"
                 id="res-date"
                 name="date"
-                value={date}
+                value={bookings.date}
                 onChange={e => {
-                    setDate(e.target.value);
+                    setBookings({ ...bookings, date: e.target.value });
                     dispatch({ type: 'UPDATE_TIMES', date: new Date(e.target.value) });
                   }}
             />

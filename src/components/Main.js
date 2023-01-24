@@ -6,6 +6,7 @@ import Menu from './pages/Menu';
 import Reservations from './pages/Reservations';
 import OnlineOrder from './pages/OnlineOrder';
 import Login from './pages/Login';
+import ConfirmedBooking from './ConfirmedBooking';
 
 function Main() {
     return(
@@ -16,6 +17,7 @@ function Main() {
                     <Route path="/about-us" element={<About />}></Route>
                     <Route path="/menu" element={<Menu />}></Route>
                     <Route path="/reservations" element={<Reservations />}></Route>
+                    <Route path="/confirmation" element={<ConfirmedBooking />}></Route>
                     <Route path="/online-order" element={<OnlineOrder />}></Route>
                     <Route path="/login" element={<Login />}></Route>
             </Routes>

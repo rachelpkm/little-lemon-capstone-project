@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { submitAPI } from '../utils/temp';
 
@@ -11,7 +11,9 @@ function BookingForm({ availableTimes, dispatch }) {
         guests: '',
         occasion: 'Birthday'
     });
-    const [isFormValid, setIsFormValid] = useState(true);
+    useEffect(() => {
+        localStorage.setItem('Bookings', JSON.stringify(bookings));
+    }, [bookings]);
 
     // SUBMIT HANDLER
     const handleSubmit = e => {
@@ -19,7 +21,7 @@ function BookingForm({ availableTimes, dispatch }) {
 
     // SUBMIT LOGIC
     if ((bookings.date, bookings.time, bookings.guests !== '')) {
-        submitAPI(isFormValid);
+        submitAPI();
         navigate('/confirmation');
 
       console.log(`
@@ -36,7 +38,6 @@ function BookingForm({ availableTimes, dispatch }) {
         occasion: 'Birthday',
       });
     } else {
-        setIsFormValid(!isFormValid);
         console.log("THERE IS AN ERROR");
         }
     }
@@ -48,7 +49,7 @@ function BookingForm({ availableTimes, dispatch }) {
     };
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form className="booking-form" onSubmit={handleSubmit}>
             <label htmlFor="res-date">Choose date</label>
             <input
                 type="date"
@@ -59,6 +60,7 @@ function BookingForm({ availableTimes, dispatch }) {
                     setBookings({ ...bookings, date: e.target.value });
                     dispatch({ type: 'UPDATE_TIMES', date: new Date(e.target.value) });
                   }}
+                required
             />
             <label htmlFor="res-time">Choose time</label>
             <select
@@ -66,6 +68,7 @@ function BookingForm({ availableTimes, dispatch }) {
                 name='time'
                 value={bookings.time}
                 onChange={handleChange}
+                required
             >
                 {times.map(time => (
                     <option key={time}>{time}</option>
@@ -80,19 +83,21 @@ function BookingForm({ availableTimes, dispatch }) {
                 name='guests'
                 value={bookings.guests}
                 onChange={handleChange}
+                required
             />
             <label htmlFor="occasion">Occasion</label>
             <select
             id="occasion"
             name='occasion'
             value={bookings.occasion}
-            onChange={handleChange}>
+            onChange={handleChange}
+            required>
                 <option>Birthday</option>
                 <option>Engagement</option>
                 <option>Wedding</option>
                 <option>Anniversary</option>
             </select>
-            <input type="submit" value="Make Your reservation" />
+            <input type="submit" className="submit-btn" value="Lets Go" />
         </form>
     );
 }

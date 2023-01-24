@@ -3,7 +3,7 @@ import hamburgerMenu from './images/icon _hamburgermenu_.svg';
 import { Link } from 'react-router-dom';
 
 const linkStyle = {
-    color: "black",
+    color: "#495E57",
 }
 
 function Nav() {

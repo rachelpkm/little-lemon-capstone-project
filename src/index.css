@@ -154,6 +154,7 @@ header {
   font-size: 64px;
   font-family: 'Markazi Text', serif;
   font-weight: 500;
+  color: #495E57;
 }
 
 .specials-top button {
@@ -381,19 +382,120 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-/* BOOKING FORM */
-.booking-page {
-  padding: 5rem 16rem 5rem 16rem;
+/* BOOKING JUMBOTRON */
+.booking-jumbotron {
+  background-color: #495E57;
+  padding: 3rem 16rem 5rem 16rem;
 }
 
-.booking-page h1 {
-  padding-bottom: 2rem;
-  text-align: center;
+.booking-jumbotron h1 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 64px;
+  color: #F4CE14;
 }
+
+.booking-jumbotron h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+  margin-bottom: 4rem;
+  margin-top: -1rem;
+}
+
+.booking-jumbotron h3 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #EE9972;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.booking-jumbotron-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rest1, .rest2 {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+}
+
+/* BOOKING FORM */
+.jumbotron-title {
+  text-align: center;
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #495E57;
+  padding-top: 3rem;
+}
+
+.booking-form {
+  padding: 3rem 16rem 5rem 16rem;
+}
+
 form {
   display: grid;
   max-width: 200px;
   gap: 20px;
+}
+
+label {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  color: #495E57;
+  font-weight: 800;
+}
+
+input, select {
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  background-color: #EDEFEE;
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  color: #495E57;
+  padding: 0.5rem;
+}
+
+input:hover, select:hover {
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: #495E57;
+  color: white;
+}
+
+.submit-btn:hover {
+  transform: scale(0.95);
+  transition-duration: 200ms;
+  background-color: hsla(50, 91%, 52%, 0.925);
+  color: black;
+}
+
+/* CONFIRMED BOOKING */
+.confirmation-page {
+  padding: 5rem 16rem 5rem 16rem;
+  color: #495E57;
+}
+
+.confirmation-page h1 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  font-size: 60px;
+  padding-bottom: 1rem;
+}
+
+.confirmation-page p {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /* MEDIA QUERIES */

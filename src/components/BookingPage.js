@@ -1,6 +1,7 @@
 import BookingForm from "./BookingForm";
 import { useReducer } from 'react';
 import { fetchAPI } from '../utils/temp';
+import BookingJumbotron from "./BookingJumbotron";
 
 export const updateTimes = (state, action) => {
   switch (action.type) {
@@ -22,7 +23,8 @@ function BookingPage() {
 
     return (
       <div className="booking-page">
-        <h1>Book now!</h1>
+        <BookingJumbotron />
+        <h1 className="jumbotron-title">Book now!</h1>
         <BookingForm
           availableTimes={availableTimes} dispatch={dispatch}
         />

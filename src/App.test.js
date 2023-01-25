@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BookingForm from './components/BookingForm';
 import { initializeTimes, updateTimes } from './components/BookingPage';
@@ -12,7 +12,7 @@ test('Renders the Choose Date Label', () => {
           times: [],
         }}
         dispatch={expect.anything()}
-      />} />
+        />} />
       </Routes>
     </BrowserRouter>
   );

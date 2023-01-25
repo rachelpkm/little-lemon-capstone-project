@@ -15,12 +15,21 @@ function BookingForm({ availableTimes, dispatch }) {
         localStorage.setItem('Bookings', JSON.stringify(bookings));
     }, [bookings]);
 
+    // FORM VALIDATION
+    const getIsFormValid = () => {
+        return(
+            bookings.date !== '' &&
+            bookings.time !== '' &&
+            bookings.guests !== ''
+        );
+    };
+
     // SUBMIT HANDLER
     const handleSubmit = e => {
       e.preventDefault();
 
     // SUBMIT LOGIC
-    if ((bookings.date, bookings.time, bookings.guests !== '')) {
+    if (getIsFormValid) {
         submitAPI();
         navigate('/confirmation');
 
@@ -49,7 +58,7 @@ function BookingForm({ availableTimes, dispatch }) {
     };
 
     return(
-        <form className="booking-form" onSubmit={handleSubmit}>
+        <form className="booking-form" onSubmit={handleSubmit} aria-label="On Submit">
             <label htmlFor="res-date">Choose date</label>
             <input
                 type="date"
@@ -64,10 +73,11 @@ function BookingForm({ availableTimes, dispatch }) {
             />
             <label htmlFor="res-time">Choose time</label>
             <select
-                id="res-time "
+                id="res-time"
                 name='time'
                 value={bookings.time}
                 onChange={handleChange}
+                aria-label="On Change"
                 required
             >
                 {times.map(time => (
@@ -77,12 +87,13 @@ function BookingForm({ availableTimes, dispatch }) {
             <label htmlFor="guests">Number of guests</label>
             <input
                 type="number"
-                placeholder="1"
                 min="1" max="10"
                 id="guests"
                 name='guests'
+                placeholder="Number of guests"
                 value={bookings.guests}
                 onChange={handleChange}
+                aria-label="On Change"
                 required
             />
             <label htmlFor="occasion">Occasion</label>
@@ -91,13 +102,16 @@ function BookingForm({ availableTimes, dispatch }) {
             name='occasion'
             value={bookings.occasion}
             onChange={handleChange}
+            aria-label="On Change"
             required>
                 <option>Birthday</option>
                 <option>Engagement</option>
                 <option>Wedding</option>
                 <option>Anniversary</option>
             </select>
-            <input type="submit" className="submit-btn" value="Lets Go" />
+            <button type="submit" className="submit-btn" id="submit-btn" disabled={!getIsFormValid()}>
+                Lets Go
+            </button>
         </form>
     );
 }

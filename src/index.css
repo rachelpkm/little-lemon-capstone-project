@@ -600,7 +600,7 @@ input:hover, select:hover {
 
   /* CUSTOMERS SAY */
   .testimonials {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   .testimonials h2 {
     font-size: 34px;
@@ -611,6 +611,31 @@ input:hover, select:hover {
   .cardTestimonials {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  /* CHICAGO */
+  .chicago {
+    padding: 2rem 1rem;
+  }
+  .chicago-column {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .chicago-column h1 {
+    font-size: 38px;
+  }
+  .chicago-column h2 {
+    font-size: 32px;
+  }
+  .chicago-column p {
+    font-size: 16px;
+  }
+  .img1 {
+    display: none;
+  }
+  .img2 {
+    display: none;
   }
 
   /* FOOTER */

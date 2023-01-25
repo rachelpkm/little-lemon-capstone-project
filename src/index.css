@@ -553,7 +553,54 @@ input:hover, select:hover {
     height: 30px;
     font-size: 14px;
   }
-  
+
+  /* SPECIALS */
+  .specials {
+    padding: 2rem 1rem;
+  }
+  .specials-top {
+    padding-bottom: 1rem;
+  }
+  .specials-top h2 {
+    font-size: 34px;
+  }
+  .specials-top button {
+    width: 150px;
+    height: 30px;
+    font-size: 14px;
+    align-self: center;
+  }
+  .specials-cards {
+    
+  }
+  .specials-card {
+    width: 100px;
+    align-self: center;
+  }
+  .specials-card img {
+    width: 100px;
+    height: 60px;
+  }
+  .specials-description {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .dish-name {
+    font-size: 19px;
+  }
+  .dish-price {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .dish-description {
+    display: none;
+  }
+  .dish-order {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   /* FOOTER */
   .footer-container {
     grid-template-columns: repeat(2, 1fr);

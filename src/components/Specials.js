@@ -24,6 +24,7 @@ function Specials() {
                             <p className='dish-name'>Greek salad</p>
                             <p className='dish-price'>$12.99</p>
                             <p className='dish-description'>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. </p>
+                            <br />
                             <p className='dish-order'>Order a delivery</p>
                         </div>
                     </div>

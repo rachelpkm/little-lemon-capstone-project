@@ -1,16 +1,20 @@
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BookingForm from './components/BookingForm';
 import { initializeTimes, updateTimes } from './components/BookingPage';
 import { submitAPI, fetchAPI } from './utils/temp';
 
 test('Renders the Choose Date Label', () => {
   render(
-    <BookingForm
-      availableTimes={{
-        times: [],
-      }}
-      dispatch={expect.anything()}
-    />
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<BookingForm availableTimes={{
+          times: [],
+        }}
+        dispatch={expect.anything()}
+      />} />
+      </Routes>
+    </BrowserRouter>
   );
   const labelElement = screen.getByText('Choose date');
   expect(labelElement).toBeInTheDocument();
@@ -34,7 +38,7 @@ test('updateTimes returns the same state', () => {
 
 test('submitAPI returns true', () => {
   const formData = {
-    date: '2022-10-12',
+    date: '2023-01-29',
     time: '20:00',
     guests: '5',
     occasion: 'Birthday',

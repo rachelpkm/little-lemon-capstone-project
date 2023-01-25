@@ -570,16 +570,13 @@ input:hover, select:hover {
     font-size: 14px;
     align-self: center;
   }
-  .specials-cards {
-    
-  }
   .specials-card {
-    width: 100px;
+    width: 110px;
     align-self: center;
   }
   .specials-card img {
-    width: 100px;
-    height: 60px;
+    width: 110px;
+    height: 75px;
   }
   .specials-description {
     display: flex;
@@ -599,6 +596,21 @@ input:hover, select:hover {
   .dish-order {
     font-size: 14px;
     font-weight: 500;
+  }
+
+  /* CUSTOMERS SAY */
+  .testimonials {
+    padding: 1rem;
+  }
+  .testimonials h2 {
+    font-size: 34px;
+  }
+  .test-img {
+    display: none;
+  }
+  .cardTestimonials {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   /* FOOTER */

@@ -389,7 +389,7 @@ footer {
 /* BOOKING JUMBOTRON */
 .booking-jumbotron {
   background-color: #495E57;
-  padding: 3rem 16rem 5rem 16rem;
+  padding: 3rem 16rem 3rem 16rem;
 }
 
 .booking-jumbotron h1 {
@@ -404,7 +404,7 @@ footer {
   font-weight: 400;
   font-size: 40px;
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   margin-top: -1rem;
 }
 
@@ -655,5 +655,41 @@ input:hover, select:hover {
   }
   .nav-item {
     font-size: 16px;
+  }
+
+  /* BOOKING JUMBOTRON */
+  .booking-jumbotron {
+    padding: 2rem 1rem;
+  }
+  .booking-jumbotron h1 {
+    font-size: 40px;
+  }
+  .booking-jumbotron h2 {
+    font-size: 36px;
+  }
+  .booking-jumbotron h3 {
+    font-size: 34px;
+  }
+  .booking-jumbotron-images {
+    justify-content: center;
+  }
+  .rest2 {
+    display: none;
+  }
+  .rest1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* BOOKING FORM */
+  .booking-form {
+    padding: 2rem 1rem;
+  }
+  /* CONFIRMED BOOKING */
+  .confirmation-page {
+    padding: 2rem 1rem;
+  }
+  .confirmation-page h1 {
+    font-size: 40px;
   }
 }
